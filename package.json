@@ -1,0 +1,16 @@
+{
+  "name": "ecommerceapi",
+  "version": "1.0.0",
+  "description": "An Api for fetch products data from data base",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shibaji Sahu",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongoose": "^7.1.1"
+  }
+}
