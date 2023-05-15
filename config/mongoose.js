@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb://0.0.0.0/productsList");
 
 //this will used as acessing database
+mongoose.set("strictQuery", true);
 const db = mongoose.connection;
 
 //If error occured

@@ -21,3 +21,13 @@ module.exports.getAllProducts = async function (req, res) {
     res.status(500).json(error);
   }
 };
+
+// get product by id
+module.exports.getProductById = async function (req, res) {
+  try {
+    const product = await Products.findById(req.query.id);
+    res.status(201).json({ data: { product: product } });
+  } catch (error) {
+    res.status(500).json(error);
+  }
+};
