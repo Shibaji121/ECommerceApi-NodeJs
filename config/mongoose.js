@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 //connection to database
-mongoose.connect("mongodb://0.0.0.0/productsList");
+mongoose.connect(process.env.DB_CONNECTION_URL);
 
 //this will used as acessing database
 mongoose.set("strictQuery", true);
