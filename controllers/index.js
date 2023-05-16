@@ -31,3 +31,22 @@ module.exports.getProductById = async function (req, res) {
     res.status(500).json(error);
   }
 };
+
+// delete product by id
+module.exports.deleteProduct = async function (req, res) {
+  try {
+    const product = await Products.findById(req.params.id);
+    if (product === null) {
+      res.status(400).json({ data: { message: "Product Not Found" } });
+    } else {
+      product.deleteOne();
+      res
+        .status(200)
+        .json({ data: { message: "Product Deleted Successfully" } });
+    }
+  } catch (error) {
+    res.status(400).json({
+      data: { message: `Error in Deleting Product:reason: ${error}` },
+    });
+  }
+};
