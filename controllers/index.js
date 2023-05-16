@@ -25,7 +25,7 @@ module.exports.getAllProducts = async function (req, res) {
 // get product by id
 module.exports.getProductById = async function (req, res) {
   try {
-    const product = await Products.findById(req.query.id);
+    const product = await Products.findById(req.params.id);
     res.status(201).json({ data: { product: product } });
   } catch (error) {
     res.status(500).json(error);
