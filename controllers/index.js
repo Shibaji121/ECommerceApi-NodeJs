@@ -85,8 +85,7 @@ module.exports.updateQuantity = async function (req, res) {
         }
       );
       res.status(200).json({
-        data: { product: updatedProduct },
-        message: "Updated Successfully",
+        data: { product: updatedProduct, message: "Updated Successfully" },
       });
     }
   } catch (error) {
